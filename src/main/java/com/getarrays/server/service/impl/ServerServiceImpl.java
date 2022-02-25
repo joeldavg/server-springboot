@@ -30,7 +30,7 @@ public class ServerServiceImpl implements ServerService {
 	@Override
 	public Server create(Server server) {
 		log.info("Saving new server: {}", server.getName());
-		server.setImageUrl(setServerImageUrl());
+//		server.setImageUrl(setServerImageUrl());
 		return serverRepository.save(server);
 	}
 
@@ -70,9 +70,10 @@ public class ServerServiceImpl implements ServerService {
 	}
 
 	private String setServerImageUrl() {
-		String[] imageNames = { "server1.png", "server2.png", "server3.png", "server4.png" };
-		return ServletUriComponentsBuilder.fromCurrentContextPath()
-				.path("/server/image/" + imageNames[new Random().nextInt(4)]).toUriString();
+//		String[] imageNames = { "server1.png", "server2.png", "server3.png", "server4.png" };
+//		return ServletUriComponentsBuilder.fromCurrentContextPath()
+//				.path("/server/image/" + imageNames[new Random().nextInt(4)]).toUriString();
+		return "";
 	}
 
 }
